@@ -40,14 +40,20 @@ nav {
 .container-2{
     display:grid;
     place-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
 }
 .Tanker{
     max-width: 1280px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    width:100%;
-    padding:10px;
-    transition: transform 0.2s;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    
 
 }
 .Ima img{
@@ -61,13 +67,13 @@ border-radius: 10px;
 .Ima img:hover{
 transform:scale(1.05) ;
 }
-.header-text{
+/* .header-text{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     
-}
+} */
 
   
 
@@ -149,16 +155,21 @@ nav ul li {
 
 
 .header-text {
-    margin-top: 20%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-size: 10px;
     animation: slideTop 1s ease forwards;
     animation-delay: 2s;
-}
-
-.header-text  {
-    margin-top: 20%;
     font-size: 15px;
 }
+.header-text p{
+    font-weight: bold;
+}
+
+
 
     .header-text h1 span {
         color: #ff004f;
@@ -402,16 +413,14 @@ video {
         gap: 10px;
     }
     .Tanker {
-        grid-template-columns:repeat(auto-fit,minmax(1fr 1fr));
+        flex-direction: column;
+        align-items: center;
       }
 
-    .header-text {
-        margin-top: 100%;
-        font-size: 25px;
-    }
+    
 
         .header-text h1 {
-            font-size: 10px;
+            font-size: 15px;
         }
 
 
@@ -423,21 +432,36 @@ video {
  
 
     .sidemenu ul{
-        background:#0E2431;
+        /* background:#0E2431;
         position: fixed;
         top: 0;
-        right: -15%;
+        right: -10%;
         width: 200px;
         height: 100vh;
         padding-top: 50px;
         z-index: 20;
         transition: right 0.5s ease-in-out;
-        display: none;
+        display: none; */
+
+    background: #0E2431;
+    position: fixed;
+    top: 0;
+    right: -200px; /* Hide the menu by moving it off-screen */
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 20;
+    transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    visibility: hidden; /* Initially hidden */
+    opacity: 0; /* Initially transparent */
         
         
     }
     .show ul{
-        display:block;
+        /* display:block; */
+        right: 0; /* Move the menu into view */
+    visibility: visible; /* Make it visible */
+    opacity: 1; /* Make it fully opaque */
     
     }
     
@@ -445,7 +469,7 @@ video {
 
         nav ul li {
             display: block;
-            margin: 25px;
+            margin: 35px;
            
         }
 
@@ -454,12 +478,14 @@ video {
             top: 25px;
             left: 25px;
             cursor: pointer;
+            font-size: 20px;
         }
         .fa-bars{
             position:absolute;
             top: 25px;
             Right:25px;
             cursor: pointer;
+            font-size: 20px;
         }
 
     .sub-title {
