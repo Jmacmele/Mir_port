@@ -235,7 +235,7 @@ nav ul li {
 .row {
     display: flex;
     justify-content: space-between;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
 }
 
 .about-col-1 {
@@ -336,18 +336,23 @@ nav ul li {
             0 0 100px #ff004f, 0 0 200px #ff004f;
     }
 
-#contact {
-    padding: 30px 0;
-}
+/* #contact {
+    padding: 200px 0;
+} */
 
 .contact-left {
     /* flex-basis: 30%; */
-    background-color: #2D7E8C;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #2D7E8C;
     border-radius: 10px;
-     padding: 20px;
+     padding: 50px;
     place-items: center;
+    height: 80%;
+    width:80%;
+    margin-left: 10%;
 
 
 }
@@ -364,7 +369,7 @@ nav ul li {
     .contact-left p {
         
         margin-right:15px;
-        font-size:25px;
+        font-size:30px;
         text-align: center;
         animation:slideRight 5s ease forwards
     
@@ -515,7 +520,7 @@ video {
     .sidemenu ul{
        
 
-    background: #0E2431;
+    background: #E3F4FC;
     position: absolute;
     right: -10px; /* Hide the menu by moving it off-screen */
     width: 200px;
@@ -587,11 +592,12 @@ video {
     }
 
     .contact-left {
-        margin-top: 20%;
+        height: 80%;
+        width: 40%;
     }
 
     .copyright {
-        font-size: 14px;
+        margin-top: 60%;
         
  }
 }
@@ -601,15 +607,48 @@ video {
     display:block;
 
 }
-@media  screen and (max-width: 480px){
+@media   (max-width: 480px){
 
     .Ima img{
-      width: 70vw;  
+      width: 70vw; 
+      height: 40vh; 
     }
     .header-text h1{
         font-size: 15px;
     }
+    .header h1{
+        font-size: 28px;
+    }
     .capstone-list p{
         font-size: 3px;
     }
+    .sidemenu ul{
+        height: 50vh;
+        width: 180px;
+        
+    }
+    .sidemenu ul li{
+margin: 20px;
+    }
+
+    .sub-title h1{
+        font-size: 50px;
+        margin-top: 10%;
+       
+    }
+    .contact-left p {
+        
+    
+        font-size:15px;
+        
+    
+    }
+   
+    
+        .social-icons a {
+        
+            font-size: 30px;
+            
+
+}
 }
